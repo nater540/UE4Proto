@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package ue4;
+
+service Player {
+  rpc GetLocation(LocationRequest) returns(Location) {}
+}
+
+message LocationRequest {
+  int32 player_id = 1;
+}
+
+message Location {
+  int32 x = 1;
+  int32 y = 2;
+  int32 z = 3;
+}
